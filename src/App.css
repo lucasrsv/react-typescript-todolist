@@ -18,7 +18,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(128, 186, 186);
+  background-color: rgb(221, 111, 60);
+  box-shadow: 0px 5px 1em rgba(68, 66, 66, 0.631);
 }
 
 .header .container {
@@ -46,4 +47,70 @@ body {
 .todoList {
   flex: 70%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(56, 53, 51, 0.85);
+}
+
+.task {
+  width: 30%;
+  display: flex;
+  margin: 10px;
+}
+
+.task .content {
+  flex: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.task .content span {
+  display: grid;
+  place-items: center;
+  background-color: rgb(255, 255, 255);
+  width: 50%;
+  height: 100%;
+  font-size: 1.5em;
+}
+
+span:nth-child(1) {
+  border-right: 0.5px solid rgba(56, 53, 51, 0.85);
+}
+
+button:active {
+  outline: none;
+  border: none;
+}
+
+.task button:hover {
+  background-color: rgb(151, 75, 39);
+  transition: 0.2s ease-in-out;
+}
+
+.task button {
+  flex: 20%;
+  height: 100%;
+  background-color: rgb(221, 111, 60);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-size: 1.5em;
+  padding: 0;
+  border: none;
+}
+
+@media (max-width: 768px) and (min-width: 512px) {
+  .task {
+    width: 80%;
+  }
+}
+
+@media (max-width: 511px) {
+  .task {
+    width: 80%;
+  }
 }

@@ -1,5 +1,4 @@
 import React from 'react'
-import { transpile } from 'typescript';
 import { ITask } from '../Interfaces';
 
 interface Props {
@@ -11,10 +10,10 @@ const TodoTask = ({ task, completeTask }: Props) => {
     return (
     <div className="task">
         <div className="content">
-            <span>{task.taskName}</span>
-            <span>{task.deadline}</span>
+            <span className="taskName">{task.taskName}</span>
+            <span className="deadline">{task.deadline}</span>
         </div>
-        <button onClick={() => {completeTask(task.taskName)}}>X</button>
+        <button onClick={() => {completeTask(task.taskName)}}>x</button>
     </div>
     );
 }
